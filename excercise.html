@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>iLoveExams</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+		crossorigin="anonymous"></script>
+
+	<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+	<header style="background-color: #3b5998">
+		<img src="https://www.digialm.com/per/g01/pub/379/ASM/OnlineAssessment/M2/banner.png" height="50">
+	</header>
+
+<div class="modal fade " id="namemodal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="true" aria-label="Enter your name">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Enter your name</h5>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="nameInput" class="form-control" placeholder="Type your name here">
+		<hr>
+		<div class="modal-text">
+			after submitting navigate to test to access question <br> <hr>
+			<h6><b>The uniqueness of the site is real exam like platform</b></h6>
+
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="submitBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+	<div id="header_1">
+		Paper1
+
+
+		<div class="just_2">
+			<div>Question Paper</div>
+		</div>
+	</div>
+	<div id="exam_name" class="left">
+		<div class="exam_names">JEE 2026 MOCK</div>
+	</div>
+	<div id="time" class="left">
+		Section
+		<div id="timer"></div>
+	</div>
+	<div class="conatiner left" id="sextion_names">
+        <div class="card m-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-link"> <button class="btn btn-outline-primary" onclick="startTest('test1')">Test 1</button></li>
+                <li class="nav-link"> <button class="btn btn-outline-primary" onclick="startTest('test2')">Test 2</button></li>
+            </ul>
+        </div>
+		</div>
+	<div id="view_in_lang" class="left">
+		<select id="lang_select" class="just_3">
+			<option value="english">English</option>
+		</select>
+		<div class="just_3">View in:</div>
+	</div>
+
+	<div id="question_area_scrollable" class="left">
+		<div class="question-title">
+		</div>
+		<div id="area_with_background">
+			<div id="quiz"></div>
+			<div id="live-score" class="text-center fw-bold my-3 text-primary"></div>
+
+		</div>
+	</div>
+
+	<div id="next_options" class="left">
+  <div id="mfran" class="button" onclick="markForReview()">Mark for Review & Next</div>
+  <div id="cr" class="button" onclick="clearAnswer()">Clear Response</div>
+  <div id="prevBtn" class="button" onclick="prevQuestion()">Previous</div>  <!-- FIXED ID -->
+  <div id="nextBtn" class="button" onclick="nextQuestion()">Save and Next</div> 
+ 
+
+ <!-- FIXED ID -->
+</div>
+
+
+
+	<div id="sidebar">
+		<div id="person_info" class="d-flex flex-column align-items-center text-center p-3">
+  <img id="profile_img"
+       src="https://www.digialm.com//OnlineAssessment/images/NewCandidateImage.jpg"
+       class=" img-fluid mb-2"
+       style="width: 100px; height: 100px;"
+       alt="Profile Image">
+  <div id="cname" class="fw-bold">Your Name</div>
+</div>
+
+		<div id="border">
+			<div id="color_info">
+				<div class="just_4">
+					<span class="just_5" style="background-position: -7px -55px;">0 Answered</span>
+					<span class="just_6">Answered</span>
+				</div>
+				<div class="just_4">
+					<span class="just_5" style="background-position: -42px -56px;">0</span>
+					<span class="just_6">Not Answered</span>
+				</div>
+				<div class="just_4">
+					<span class="just_5" style="background-position: -107px -56px;">0</span>
+					<span class="just_6">Not Visited</span>
+				</div>
+				
+				<div class="just_4" id="long">
+					<span class="just_5" style="background-position: -9px -87px;">0</span>
+					<span class="just_6">Answered & Marked for Review (will be considered for evaluation)</span>
+				</div>
+			</div>
+			<div id="small_header">Question Pallete</div>
+			<div id="questions_select_area">
+				<div id="choose_text">Choose a Question</div>
+				<div id="palette-list">
+					<div class="a item">1</div>
+					<div class="na item">2</div>
+					<div class="nv item">3</div>
+					<div class="mr item">4</div>
+					<div class="amr item">5</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="results" class="left"></div>
+	
+
+	<div id="favourites_view"></div>
+
+	<footer id="ultimate_footer"></footer>
+
+	</select>
+
+	<script type="text/javascript" src="javascript.js"></script>
+</body>
+
+</html>

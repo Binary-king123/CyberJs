@@ -1,0 +1,54 @@
+{
+  "test1": [
+    {
+      "question": "A transformer of efficiency 90% draws an input power of 4 kW. An electrical appliance connected across the secondary draws a current of 6 A. The impedance of device is.........",
+      "options": ["60 Ω", "50 Ω", "80 Ω", "100 Ω"],
+      "correct": 3
+    },
+    {
+      "question": "The core of a transformer is laminated so that.......",
+      "options": [
+        "Ratio of I/p & O/p voltage increases",
+        "Rusting of core may be stopped",
+        "Energy loss due to eddy current may be reduced",
+        "Change in flux is increased"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In transformer, core is made of soft iron to reduce.....",
+      "options": [
+        "Hysterlsis losses",
+        "Eddy current losses",
+        "Force opposing current",
+        "the weight"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "A primary winding of transformer has 500 turns whereas its secondary has 5000 turns. Primary is connected to ac supply of 20V, 50Hz The secondary output of....",
+      "options": [
+        "200V, 25Hz",
+        "200V, 50 Hz",
+        "2V, 100Hz",
+        "2V, 50 Hz"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A step down transformer is connected to main supply 200 V to operate a 6V, 30 W bulb. The current in primary is.....",
+      "options": ["0.3A", "1.5 A", "3A", "0.15 A"],
+      "correct": 3
+    },
+    {
+      "question": "Alternating current cannot be measured by dc ammeter because,",
+      "options": [
+        "ac cannot pass through dc ammeter",
+        "Average value of complete cycle is zero",
+        "ac is virtual",
+        "ac changes its direction"
+      ],
+      "correct": 1
+    }
+  ]
+}
